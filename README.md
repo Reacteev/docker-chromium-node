@@ -1,12 +1,12 @@
-# Puppeteer-Chrome-Linnux
+# Docker-Chrome-Node
 
 ## Build the image
 
-> Change the versions link to what it is built.
+> Tag with Git the versions of Node and Chromium, like `node-14.17.5-alpine_chromium-81.0.4044.113`.
 
 ```bash
 docker build \
-  --tag reacteev/puppeteer-chrome-linux:latest \
-  --tag reacteev/puppeteer-chrome-linux:node-14.17.5-alpine_chromium-81.0.4044.113 \
+  --tag reacteev/chromium-node:latest \
+  --tag reacteev/chromium-node:$(git describe --tag) \
   .
 ```
