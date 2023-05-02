@@ -1,5 +1,12 @@
 # Docker-Chrome-Node
 
+`Dockerfile` for <https://hub.docker.com/r/reacteev/chromium-node>.
+
+The image has:
+
+- node
+- chromium
+
 ## Getting Started
 
 ```bash
@@ -8,7 +15,7 @@ docker run -it --rm --volume "$(pwd):/app" reacteev/chromium-node:latest /bin/sh
 
 ## Contributing
 
-> Tag with Git the versions of Node and Chromium, like `node-14.17.5-alpine_chromium-81.0.4044.113`.
+> Tag with Git the versions of Node and Chromium, like `node-18.16.0-alpine_chromium-112.0.5615.165`.
 
 ### Build the image
 
@@ -26,3 +33,7 @@ docker login
 docker push reacteev/chromium-node:latest
 docker push reacteev/chromium-node:$(git describe --tag)
 ```
+
+## Todo
+
+- [ ] Add GitHub Actions to push images to the Docker hub, see this documentation <https://docs.docker.com/build/ci/github-actions/update-dockerhub-desc/>.
